@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>IMAGE GALLERY</title>
+</head>
+<body>
+    <h1 style="align-items: center ;text-align: center; margin-top: 30px;">IMAGE GALLERY</h1>
+    <div class="container">
+        <div class="wrapper">
+            <img src="./asset/image9.jpeg" >
+            <img src="./asset/image10.jpeg" >
+            <img src="./asset/image11.jpeg" >
+            <img src="./asset/image12.jpeg" >
+        </div>
+    </div>
+
+
+    <div class="full-img" id="fullImgBox">
+        <img src="./asset/image1.jpeg"id="fullImg">
+        <span onclick="closeFullImg()">X</span>
+
+    </div>
+   
+    <div class="image-gallery">
+        <img src="./asset/image1.jpeg"  onclick="openFullImg(this.src)">
+        <img src="./asset/image2.jpeg"  onclick="openFullImg(this.src)">
+        <img src="./asset/image3.jpeg"  onclick="openFullImg(this.src)">
+        <img src="./asset/image4.jpeg"  onclick="openFullImg(this.src)">
+        <img src="./asset/image5.jpeg"  onclick="openFullImg(this.src)">
+        <img src="./asset/image6.jpeg"  onclick="openFullImg(this.src)">
+        <img src="./asset/image7.jpeg"  onclick="openFullImg(this.src)">
+        <img src="./asset/image8.jpeg"  onclick="openFullImg(this.src)">
+        <img src="./asset/image9.jpeg"  onclick="openFullImg(this.src)">
+        <img src="./asset/image10.jpeg" onclick="openFullImg(this.src)">
+        <img src="./asset/image11.jpg"  onclick="openFullImg(this.src)">
+        <img src="./asset/image12.jpeg" onclick="openFullImg(this.src)">
+    </div>
+    
+
+    <script>
+        var fullImgBox=document.getElementById('fullImgBox');
+        var fullImg=document.getElementById('fullImg');
+        function openFullImg(pic){
+            fullImgBox.style.display='flex';
+            fullImg.src=pic;
+        }
+        function closeFullImg(){
+            fullImgBox.style.display='none';
+        }
+    </script>
+</body>
+</html>
